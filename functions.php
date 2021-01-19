@@ -99,7 +99,9 @@
     /** @link https://developer.wordpress.org/reference/functions/register_nav_menus/*/
     function lpwd_register_menus() {
         register_nav_menus( array(
-            'navigation' =>  'Navigation de mon site'
+            'navigation' =>  'Navigation de mon site',
+            'main' => 'Menu Principal',
+            'footer' => 'Menu footer',
         ) );
     }
     add_action( 'init', 'lpwd_register_menus' );
