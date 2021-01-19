@@ -21,7 +21,7 @@
         <div class="header__burgercontainer">
             <div class="burger"></div>
         </div>
-        <?php lpwd_clean_custom_menu("navigation") ?>
+        <?php lpwd_clean_custom_menu("main") ?>
     </header>
 
 
