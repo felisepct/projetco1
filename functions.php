@@ -22,8 +22,37 @@
      *    Ajout des pages d'options 
      * ********************************/
     
-    if( function_exists('acf_add_options_page') ) {
-        acf_add_options_page([
+    // if( function_exists('acf_add_options_page') ) {
+    //     acf_add_options_page([
+    //         'page_title' => 'Sections générales',
+    //         'menu_title' => 'Sections',
+    //         'menu_slug' => 'sections-generales',
+    //         'capability' => 'edit_posts',
+    //         'parent_slug' => '',
+    //         'position' => 10,
+    //         'icon_url' => 'dashicons-align-full-width',
+    //         'redirect' => false,
+    //         'post_id' => 'sections',
+    //         'autoload' => false,
+    //         'update_button' => 'Mettre à jour',
+    //     ]);
+    //     acf_add_options_page([
+    //         'page_title' => 'Réseaux sociaux',
+    //         'menu_title' => 'Réseaux sociaux',
+    //         'menu_slug' => 'reseaux-sociaux',
+    //         'capability' => 'edit_posts',
+    //         'parent_slug' => '',
+    //         'icon_url' => 'dashicons-align-full-width',
+    //         'redirect' => false,
+    //         'post_id' => 'reseaux-sociaux',
+    //         'autoload' => false,
+    //         'update_button' => 'Mettre à jour',
+    //     ]);
+    // }
+    function acf_add_options_pages() {
+  
+        $options_pages = [
+          [
             'page_title' => 'Sections générales',
             'menu_title' => 'Sections',
             'menu_slug' => 'sections-generales',
@@ -35,8 +64,28 @@
             'post_id' => 'sections',
             'autoload' => false,
             'update_button' => 'Mettre à jour',
-        ]);
-    }
+          ],
+          [
+            'page_title' => 'Réseaux sociaux',
+            'menu_title' => 'Réseaux sociaux',
+            'menu_slug' => 'reseaux-sociaux',
+            'capability' => 'edit_posts',
+            'parent_slug' => '',
+            'icon_url' => 'dashicons-align-full-width',
+            'redirect' => false,
+            'post_id' => 'reseaux-sociaux',
+            'autoload' => false,
+            'update_button' => 'Mettre à jour',
+          ],
+        ];
+      
+        foreach ($options_pages as $option_page) {
+          acf_add_options_page($option_page);
+        }
+      
+      }
+      
+      add_action("acf/init", "acf_add_options_pages");
 
     /***********************************
      * END : Ajout des pages d'options 

@@ -11,6 +11,8 @@
     if( have_posts() ): 
         while( have_posts() ) : the_post();
         get_template_part( 'template-parts/cover' );
+        get_template_part( 'template-parts/features' );
+        get_template_part( 'template-parts/slider' );
         
         endwhile; 
     endif;
