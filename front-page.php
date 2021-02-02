@@ -1,4 +1,5 @@
 <!-- home -->
+<?php /* Template Name:home */ ?>
 
 <?php 
     /** @link https://developer.wordpress.org/reference/functions/get_header/ */
@@ -10,9 +11,12 @@
         get_template_part( 'template-parts/cover' );
         get_template_part('template-parts/caracteristique');
         get_template_part('template-parts/homepartners');
-        
-        endwhile; 
+
+        endwhile;
+
     endif;
+
+    
 
     /** @link https://developer.wordpress.org/reference/functions/get_footer/ */
     get_footer();

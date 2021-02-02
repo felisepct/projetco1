@@ -1,0 +1,36 @@
+.sectionSuivi{
+    margin-top: 80px;
+}
+.imgSuivi{
+    display: grid;
+    width: 100%;
+    position: relative;
+    filter: brightness(0.85);
+    object-fit: cover;
+    
+}
+
+.imgSuivi:hover{
+    filter: brightness(0);
+    width: 100%;
+}
+
+.suiviSport{
+    top: -10%;
+    height: 50%;
+}
+.suiviSport__section{
+    margin-bottom: -400px;
+}
+.suivi{
+    z-index: 50;
+    position: absolute;
+    top: 130%;
+    margin-left: 12%;
+}
+.suiviactivite{
+    z-index: 50;
+    position: absolute;
+    top: 180%;
+    margin-left: 42%;
+}

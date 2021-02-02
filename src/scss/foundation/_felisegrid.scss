@@ -1,0 +1,38 @@
+.container{
+    max-width: 1920px;
+    width : 100%;
+    margin : auto;
+}
+ 
+.row{
+    display : flex;
+    flex-wrap : wrap;
+}
+
+.right_box{
+    text-align: right;
+    position : absolute;
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+}
+
+
+$maxColumns : 12;
+@for $i from 1 through $maxColumns{
+    .col-#{$i}{
+        max-width : $i / $maxColumns * 100%;
+        flex-basis : $i / $maxColumns * 100%;
+    }
+}
+ 
+ 
+@media only screen and (min-width: 62rem) {
+    @for $i from 1 through $maxColumns{
+        .col-l-#{$i}{
+            max-width : $i / $maxColumns * 100%;
+            flex-basis : $i / $maxColumns * 100%;
+        }
+    }
+}
