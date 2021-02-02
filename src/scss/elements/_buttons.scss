@@ -33,3 +33,90 @@
 .button.-secondary{
     background : $secondary-color;
 }
+
+//bouton achat (personnalisé)
+/*bouton d'achat + anim hover*/
+.buttonAchat {
+    border: 0;
+    text-decoration: none;
+    line-height: 2.5;
+    padding: 7px 42px;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    color:#000000;
+    border-radius: 20px;
+    background: linear-gradient(164deg, rgba(168,226,251,1) 31%, rgba(114,212,255,1) 57%);
+}
+
+.buttonAchat:hover {
+    cursor: pointer;
+    transform: scale(1);
+	animation: anim-pulse 2s infinite;
+}
+@keyframes anim-pulse{
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(168, 226, 251, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(52, 172, 224, 0);
+	}
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+	}
+}
+/*bouton autre + anim hover*/
+.buttonAutre {
+    text-decoration: none;
+    line-height: 2.5;
+    padding: 7px 40px;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    color:#000000;
+    border-radius: 20px;
+    border:solid #1d3540 2px;
+
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.3s;
+
+}
+
+.buttonAutre:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: #1d3540;
+  
+    transform: scaleX(0);
+    
+    transform-origin: 0 50%;
+    
+    transition-property: transform;
+    
+    transition-duration: 0.3s;
+  
+    transition-timing-function: ease-out;
+  }
+
+  .buttonAutre:hover:before {
+    transform: scaleX(1);
+}
+
+.buttonAutre:hover{
+    cursor: pointer;
+    color:#ffffff;
+}

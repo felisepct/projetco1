@@ -6,10 +6,12 @@
 @import "./foundation/grid";
 @import "./foundation/animations";
 
+@import "./foundation/felisegrid";
+
 // Elements
 @import "./elements/buttons";
 @import "./elements/typography";
-@import "./elements/form";
+// @import "./elements/form";
 @import "./elements/burger";
 @import "./elements/watch";
 
@@ -18,6 +20,8 @@
 @import "./components/nav-js-animation";
 @import "./components/product";
 @import "./components/dots"; 
+
+@import "./components/cover"; 
 
 //layout
 @import "./layout/section";

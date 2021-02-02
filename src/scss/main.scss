@@ -6,6 +6,8 @@
 @import "./foundation/grid";
 @import "./foundation/animations";
 
+@import "./foundation/felisegrid";
+
 // Elements
 @import "./elements/buttons";
 @import "./elements/typography";
@@ -14,11 +16,17 @@
 @import "./elements/watch";
 
 // Components
-//@import "./components/nav-css-animation";
+@import "./components/nav-css-animation";
 @import "./components/nav-css-animation";
 @import "./components/product";
 @import "./components/dots"; 
 @import "./components/form"; 
+
+@import "./components/cover"; 
+@import "./components/caracteristique"; 
+@import "./components/homepartners";
+@import "./components/features";
+@import "./components/tracking";
 
 //layout
 @import "./layout/section";
